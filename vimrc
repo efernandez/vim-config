@@ -30,6 +30,7 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 
 " Load plugins
 filetype off
+let g:pathogen_disabled = []  " add bundles to disable here
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
@@ -52,7 +53,7 @@ filetype plugin indent on
 set smartindent
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set expandtab  " Use <Ctrl-V><Tab> to insert a hard tab.
 autocmd FileType make setlocal noexpandtab
 
 " Code folding
@@ -64,7 +65,8 @@ set foldlevel=99
 set completeopt=menuone,longest,preview
 "set wildmenu; set wildmode=longest,full
 let g:SuperTabDefaultCompletionType = "context"
-au FileType python set omnifunc=pythoncomplete#Complete
+"au FileType python set omnifunc=pythoncomplete#Complete
+set omnifunc=syntaxcomplete#Complete
 
 set showcmd
 set modeline
