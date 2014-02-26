@@ -1,16 +1,32 @@
+set mouse=a
+
 " Window Splits
 "  * Vertical Split: Ctrl+w + v / Horizontal Split: Ctrl+w + s
 "  * Close: Ctrl+w + q
-set mouse=a
+" Move through splits
 nmap <C-Left> <C-w><Left>
 nmap <C-Right> <C-w><Right>
 nmap <C-Up> <C-w><Up>
 nmap <C-Down> <C-w><Down>
+" Rotate through splits:
+nmap <kPlus> <C-w><C-w>
+nmap <kMinus> <S-C-w><S-C-w>
+" Create splits (and focus them)
+nmap <C-kMinus> <C-w>v<kPlus>
+nmap <C-kPlus> <C-w>s<kPlus>
+nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
+" Fullscreen the active split
+"map <c-w>f <c-w>_<c-w><Bar>
 
 " Buffers (with minibufexpl plugin to see a list of open buffers):
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
+
+" Tabs
+"   * Use :tabnew to create a tab.
+"   * Use :tabNext to change to next tab.
+"   * Use :tabclose to close the active tab.
 
 " Load plugins
 filetype off
