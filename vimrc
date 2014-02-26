@@ -73,9 +73,14 @@ set title
 " Let backspace delete over line breaks
 set backspace=indent,eol,start
 
-"" Searching (http://mislav.uniqpath.com/2011/12/vim-revisited/)
+" Searching (http://mislav.uniqpath.com/2011/12/vim-revisited/)
 set ignorecase
 set smartcase
+
+" Spell checking
+"   * Use "z=" with cursor on top of a word for suggestions.
+nmap <silent> <leader>s :setlocal spell!<CR>  " toggle spell checking
+au BufRead *.txt setlocal spell spelllang=en
 
 set pastetoggle=<F2>
 if !has("gui_running")
