@@ -1,14 +1,14 @@
 " Window Splits
 "  * Vertical Split: Ctrl+w + v / Horizontal Split: Ctrl+w + s
 "  * Close: Ctrl+w + q
-:set mouse=a
+set mouse=a
 nmap <C-Left> <C-w><Left>
 nmap <C-Right> <C-w><Right>
 nmap <C-Up> <C-w><Up>
 nmap <C-Down> <C-w><Down>
 
 " Buffers (with minibufexpl plugin to see a list of open buffers):
-"   * Use ": <filename>" to place in buffer.
+"   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
 
