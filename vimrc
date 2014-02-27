@@ -39,8 +39,8 @@ Bundle 'Lokaltog/vim-easymotion'
        " <C-a>/<C-x> increment/decrement numbers; add support for dates
        " d<C-a> changes a date to the current day
 Bundle 'tpope/vim-speeddating'
-       " Comment out stuff (gcc for line, gc<motion>, gc in visual mode)
-Bundle 'tpope/vim-commentary'
+       " Comment out stuff (<leader>{cc,cu,cs,...})
+Bundle 'scrooloose/nerdcommenter'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
