@@ -122,6 +122,7 @@ set completeopt=menuone,longest,preview
 let g:SuperTabDefaultCompletionType = "context"
 "au FileType python set omnifunc=pythoncomplete#Complete
 set omnifunc=syntaxcomplete#Complete
+let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'
 
 set showcmd
 set modeline
