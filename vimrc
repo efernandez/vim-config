@@ -1,4 +1,10 @@
-set mouse=a
+set nocompatible
+
+" Load plugins
+filetype off
+let g:pathogen_disabled = []  " add bundles to disable here
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 " Window Splits
 "  * Vertical Split: Ctrl+w + v / Horizontal Split: Ctrl+w + s
@@ -27,12 +33,6 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use :tabnew to create a tab.
 "   * Use :tabNext to change to next tab.
 "   * Use :tabclose to close the active tab.
-
-" Load plugins
-filetype off
-let g:pathogen_disabled = []  " add bundles to disable here
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 " Setup keyboard bindings for plugins
 let mapleader = "<"
@@ -91,6 +91,7 @@ set pastetoggle=<F2>
 if !has("gui_running")
   set background=dark
 endif
+set mouse=a
 
 cnoreabbrev W w
 cnoreabbrev Q q
