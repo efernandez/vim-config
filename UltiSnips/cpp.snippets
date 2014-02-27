@@ -1,0 +1,22 @@
+# By Sergey Alexandrov
+# https://code.google.com/p/mcf/source/browse/.vim/snippets/ros.snippets
+
+snippet up "Unique pointer"
+std::unique_ptr<${1:${VISUAL:Type}}>$0
+endsnippet
+
+snippet sp "Shared pointer"
+std::shared_ptr<${1:${VISUAL:Type}}>$0
+endsnippet
+
+snippet tdup "Typedef unique pointer" !b
+typedef std::unique_ptr<${1:Type}> ${2:UPtr};$0
+endsnippet
+
+snippet tdsp "Typedef shared pointer" !b
+typedef std::shared_ptr<${1:Type}> ${2:Ptr};$0
+endsnippeti
+
+snippet car "Const auto reference" !b
+const auto& ${1:variable} = $0
+endsnippet
