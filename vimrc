@@ -139,6 +139,10 @@ set smartcase
 nmap <silent> <leader>s :setlocal spell!<CR>  " toggle spell checking
 au BufRead,BufNewFile *.txt setlocal spell spelllang=en
 
+" Don't wrap lines, use horizontal scroll
+"set nowrap
+"set go+=b
+
 set pastetoggle=<F2>
 if !has("gui_running")
   set background=dark
