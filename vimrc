@@ -9,24 +9,55 @@ call vundle#rc()
 " Install all bundles with: vim +BundleInstall +qall
 Bundle 'gmarik/vundle'
 
+" Generic plugins
+       " ack-grep in vim
 "Bundle 'mileszs/ack.vim'
+       " search all file names (<leader>t)
 "Bundle 'wincent/Command-T'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-git'
+       " Undo tree (<leader>g)
 Bundle 'sjl/gundo.vim'
+       " Run tests. :MakeGreen, :MakeGreen %
 Bundle 'reinh/vim-makegreen'
+       " Shows open buffers
 Bundle 'sontek/minibufexpl.vim'
+       " File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
-Bundle 'vim-scripts/pep8'
-Bundle 'fs111/pydoc.vim'
-Bundle 'alfredodeza/pytest.vim'
-Bundle 'mitechie/pyflakes-pathogen'
-Bundle 'sontek/rope-vim'
+       " Snippets (snippets/<lang>.snippets; use with auto-complete)
 Bundle 'msanders/snipmate.vim'
+       " Use tab for all completions
 Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-surround'
+       " Manipulate parentheses, brackets, XML tags, etc.
+"Bundle 'tpope/vim-surround'
+       " Multi-language syntax checking on save
 Bundle 'scrooloose/syntastic'
+       " Multi-language auto-completion (needs compilation!)
+"Bundle 'Valloric/YouCompleteMe'
+       " TODO list (<leader>td)
 Bundle 'vim-scripts/TaskList.vim'
+       " Fast motions
+"Bundle 'Lokaltog/vim-easymotion'
+       " Comment out stuff (gcc for line, gc<motion>, gc in visual mode)
+Bundle 'tpope/vim-commentary'
+
+" Git plugins
+       " Git integration. :Gedit, :Gdiff, etc.
+Bundle 'tpope/vim-fugitive'
+       " Git integration (syntax, indent)
+Bundle 'tpope/vim-git'
+
+" Python plugins
+       " PEP-8 checker
+"Bundle 'vim-scripts/pep8'
+       " See module documentation (<leader>pw + cursor)
+Bundle 'fs111/pydoc.vim'
+       " On-the-fly code checking (requires pyflakes)
+Bundle 'mitechie/pyflakes-pathogen'
+       " Refactoring and code-assist (see doc/ropevim.txt in repo)
+"Bundle 'sontek/rope-vim'
+
+" HTML plugins
+       " Writing HTML
+"Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Setup keyboard bindings for plugins
 map <leader>td <Plug>TaskList     " Browse TODO items
