@@ -187,11 +187,11 @@ let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 
 " ROS
-au BufRead,BufNewFile *.urdf            setfiletype xml
-au BufRead,BufNewFile *.launch          setfiletype xml
-au BufRead,BufNewFile *.launch          UltiSnipsAddFiletypes roslaunch.xml
-au BufRead,BufNewFile cfg/*.cfg         UltiSnipsAddFiletypes roscfg.python
-au BufRead,BufNewFile manifest.xml      UltiSnipsAddFiletypes rosmanifest.xml
+au BufRead,BufNewFile *.urdf              setfiletype xml
+au BufRead,BufNewFile *.launch            setfiletype xml
+au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
+au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
+au BufRead,BufNewFile manifest.xml        UltiSnipsAddFiletypes rosmanifest.xml
 au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
