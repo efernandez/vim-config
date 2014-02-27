@@ -1,10 +1,41 @@
 set nocompatible
+let mapleader = '<'  " default \, not available on ES keyboard
 
 " Load plugins
 filetype off
-let g:pathogen_disabled = []  " add bundles to disable here
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" Install all bundles with: vim +BundleInstall +qall
+Bundle 'gmarik/vundle'
+
+"Bundle 'mileszs/ack.vim'
+"Bundle 'wincent/Command-T'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-git'
+Bundle 'sjl/gundo.vim'
+Bundle 'reinh/vim-makegreen'
+Bundle 'sontek/minibufexpl.vim'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/pep8'
+Bundle 'fs111/pydoc.vim'
+Bundle 'alfredodeza/pytest.vim'
+Bundle 'mitechie/pyflakes-pathogen'
+Bundle 'sontek/rope-vim'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'vim-scripts/TaskList.vim'
+
+" Setup keyboard bindings for plugins
+map <leader>td <Plug>TaskList     " Browse TODO items
+map <leader>g :GundoToggle<CR>    " See past file edits
+map <leader>n :NERDTreeToggle<CR> " Open file browser
+map <leader>a <Esc>:Ack!
+" For pydoc, use <leader>pw with cursor on a module name
+" For command-t, use <leader>t (or <leader>b to search only buffers)
+"   * Needs to be compiled with "rake make" first (with ruby-dev installed).
 
 " Window Splits
 "  * Vertical Split: Ctrl+w + v / Horizontal Split: Ctrl+w + s
@@ -33,16 +64,6 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use :tabnew to create a tab.
 "   * Use :tabNext to change to next tab.
 "   * Use :tabclose to close the active tab.
-
-" Setup keyboard bindings for plugins
-let mapleader = "<"
-map <leader>td <Plug>TaskList     " Browse TODO items
-map <leader>g :GundoToggle<CR>    " See past file edits
-map <leader>n :NERDTreeToggle<CR> " Open file browser
-map <leader>a <Esc>:Ack!
-" For pydoc, use <leader>pw with cursor on a module name
-" For command-t, use <leader>t (or <leader>b to search only buffers)
-"   * Needs to be compiled with "rake make" first (with ruby-dev installed).
 
 " Enable syntax highlighting
 syntax on
