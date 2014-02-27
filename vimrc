@@ -22,8 +22,11 @@ Bundle 'reinh/vim-makegreen'
 Bundle 'sontek/minibufexpl.vim'
        " File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
-       " Snippets (snippets/<lang>.snippets; use with auto-complete)
-Bundle 'msanders/snipmate.vim'
+       " Snippets (snippets/<lang>.snippets; C-j / auto-complete)
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
        " Use tab for all completions
 Bundle 'ervandew/supertab'
        " Manipulate parentheses, brackets, XML tags, etc.
@@ -117,12 +120,14 @@ set foldmethod=indent
 set foldlevel=99
 
 " Auto-completion
+set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
 "set wildmenu; set wildmode=longest,full
-let g:SuperTabDefaultCompletionType = "context"
-"au FileType python set omnifunc=pythoncomplete#Complete
-set omnifunc=syntaxcomplete#Complete
+    " default YouCompleteMe configuration for C++
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'
+    " bindings for snipMate
+imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
+smap <C-j> <Plug>snipMateNextOrTrigger
 
 set showcmd
 set modeline
