@@ -12,8 +12,8 @@ Bundle 'gmarik/vundle'
 " Generic plugins
        " ack-grep in vim
 "Bundle 'mileszs/ack.vim'
-       " search all file names (<leader>t)
-"Bundle 'wincent/Command-T'
+       " search all file names (C-p)
+Bundle 'kien/ctrlp.vim'
        " Undo tree (<leader>g)
 Bundle 'sjl/gundo.vim'
        " Run tests. :MakeGreen, :MakeGreen %
