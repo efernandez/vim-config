@@ -112,8 +112,8 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab  " Use <Ctrl-V><Tab> to insert a hard tab.
-autocmd FileType make setlocal noexpandtab
-autocmd FileType html,xml set tabstop=2 shiftwidth=2
+au FileType make setlocal noexpandtab
+au FileType html,xml set tabstop=2 shiftwidth=2
 
 " Line numbers
 set number
@@ -170,8 +170,8 @@ cnoreabbrev W w
 cnoreabbrev Q q
 
 " Vala
-autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
-autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
+au BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala            setfiletype vala
 au BufRead,BufNewFile *.vala.in         setfiletype vala
 au BufRead,BufNewFile *.vapi            setfiletype vala
@@ -179,8 +179,9 @@ let vala_comment_strings = 1
 let vala_space_errors = 1
 
 " Python
-autocmd FileType python map <buffer> <leader>j :RopeGotoDefinition<CR>
-autocmd FileType python map <buffer> <leader>r :RopeRename<CR>
+au FileType python map <buffer> <leader>j :RopeGotoDefinition<CR>
+au FileType python map <buffer> <leader>r :RopeRename<CR>
+au FileType python map <buffer> <f5>      :w<CR>:!python %<CR>
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 
