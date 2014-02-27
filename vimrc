@@ -113,6 +113,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab  " Use <Ctrl-V><Tab> to insert a hard tab.
 autocmd FileType make setlocal noexpandtab
+autocmd FileType html,xml set tabstop=2 shiftwidth=2
 
 " Line numbers
 set number
@@ -125,6 +126,7 @@ set foldlevel=99
 " Auto-completion
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
+set wildignore=*.o,*.obj,*.pyc
 "set wildmenu; set wildmode=longest,full
     " YouCompleteMe configuration
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
@@ -172,17 +174,20 @@ au BufRead,BufNewFile *.vapi            setfiletype vala
 let vala_comment_strings = 1
 let vala_space_errors = 1
 
-" URDF
-au BufRead,BufNewFile *.urdf            setfiletype xml
-
 " Python
 autocmd FileType python map <buffer> <leader>j :RopeGotoDefinition<CR>
 autocmd FileType python map <buffer> <leader>r :RopeRename<CR>
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 
-" HTML
-au BufRead,BufNewFile *.html            set tabstop=2 shiftwidth=2
+" ROS
+au BufRead,BufNewFile *.urdf            setfiletype xml
+au BufRead,BufNewFile *.launch          setfiletype xml
+au BufRead,BufNewFile *.launch          UltiSnipsAddFiletypes roslaunch.xml
+au BufRead,BufNewFile cfg/*.cfg         UltiSnipsAddFiletypes roscfg.python
+au BufRead,BufNewFile manifest.xml      UltiSnipsAddFiletypes rosmanifest.xml
+au BufRead,BufNewFile */stacks/*.cpp    UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */*_ws/*.cpp      UltiSnipsAddFiletypes roscpp.cpp
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
