@@ -192,8 +192,8 @@ au BufRead,BufNewFile *.launch          setfiletype xml
 au BufRead,BufNewFile *.launch          UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile cfg/*.cfg         UltiSnipsAddFiletypes roscfg.python
 au BufRead,BufNewFile manifest.xml      UltiSnipsAddFiletypes rosmanifest.xml
-au BufRead,BufNewFile */stacks/*.cpp    UltiSnipsAddFiletypes roscpp.cpp
-au BufRead,BufNewFile */*_ws/*.cpp      UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
