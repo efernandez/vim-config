@@ -56,6 +56,9 @@ set shiftwidth=4
 set expandtab  " Use <Ctrl-V><Tab> to insert a hard tab.
 autocmd FileType make setlocal noexpandtab
 
+" Line numbers
+set number
+
 " Code folding
 " Use "za" to open or close a fold.
 set foldmethod=indent
@@ -82,7 +85,7 @@ set smartcase
 " Spell checking
 "   * Use "z=" with cursor on top of a word for suggestions.
 nmap <silent> <leader>s :setlocal spell!<CR>  " toggle spell checking
-au BufRead *.txt setlocal spell spelllang=en
+au BufRead,BufNewFile *.txt setlocal spell spelllang=en
 
 set pastetoggle=<F2>
 if !has("gui_running")
@@ -92,7 +95,7 @@ endif
 cnoreabbrev W w
 cnoreabbrev Q q
 
-" Vala support
+" Vala
 autocmd BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 autocmd BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead,BufNewFile *.vala            setfiletype vala
@@ -101,7 +104,7 @@ au BufRead,BufNewFile *.vapi            setfiletype vala
 let vala_comment_strings = 1
 let vala_space_errors = 1
 
-" URDF support
+" URDF
 au BufRead,BufNewFile *.urdf            setfiletype xml
 
 " Python
@@ -109,6 +112,9 @@ autocmd FileType python map <buffer> <leader>j :RopeGotoDefinition<CR>
 autocmd FileType python map <buffer> <leader>r :RopeRename<CR>
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
+
+" HTML
+au BufRead,BufNewFile *.html            set tabstop=2 shiftwidth=2
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
