@@ -34,8 +34,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
        " TODO list (<leader>td)
 Bundle 'vim-scripts/TaskList.vim'
-       " Fast motions
-"Bundle 'Lokaltog/vim-easymotion'
+       " Fast motions (<leader><leader>{w,b,...})
+Bundle 'Lokaltog/vim-easymotion'
+       " <C-a>/<C-x> increment/decrement numbers; add support for dates
+       " d<C-a> changes a date to the current day
+Bundle 'tpope/vim-speeddating'
        " Comment out stuff (gcc for line, gc<motion>, gc in visual mode)
 Bundle 'tpope/vim-commentary'
 
