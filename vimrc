@@ -31,7 +31,7 @@ Bundle 'ervandew/supertab'
        " Multi-language syntax checking on save
 Bundle 'scrooloose/syntastic'
        " Multi-language auto-completion (needs compilation!)
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
        " TODO list (<leader>td)
 Bundle 'vim-scripts/TaskList.vim'
        " Fast motions
