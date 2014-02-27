@@ -117,6 +117,7 @@ au FileType html,xml set tabstop=2 shiftwidth=2
 
 " Line numbers
 set number
+set relativenumber
 
 " Code folding
 " Use "za" to open or close a fold.
