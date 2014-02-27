@@ -99,6 +99,9 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use :tabNext to change to next tab.
 "   * Use :tabclose to close the active tab.
 
+" Backup settings
+set directory=~/.vim/.swap,/tmp
+
 " Enable syntax highlighting
 syntax on
 filetype on
