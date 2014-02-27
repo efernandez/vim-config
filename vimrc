@@ -117,6 +117,7 @@ au FileType html,xml set tabstop=2 shiftwidth=2
 
 " Line numbers
 set number
+set relativenumber
 
 " Code folding
 " Use "za" to open or close a fold.
@@ -186,13 +187,15 @@ let g:pyflakes_use_quickfix = 0
 let g:pep8_map='<leader>8'
 
 " ROS
-au BufRead,BufNewFile *.urdf            setfiletype xml
-au BufRead,BufNewFile *.launch          setfiletype xml
-au BufRead,BufNewFile *.launch          UltiSnipsAddFiletypes roslaunch.xml
-au BufRead,BufNewFile cfg/*.cfg         UltiSnipsAddFiletypes roscfg.python
-au BufRead,BufNewFile manifest.xml      UltiSnipsAddFiletypes rosmanifest.xml
-au BufRead,BufNewFile */stacks/*.cpp    UltiSnipsAddFiletypes roscpp.cpp
-au BufRead,BufNewFile */*_ws/*.cpp      UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile *.urdf              setfiletype xml
+au BufRead,BufNewFile *.launch            setfiletype xml
+au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
+au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
+au BufRead,BufNewFile manifest.xml        UltiSnipsAddFiletypes rosmanifest.xml
+au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
+au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
+au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
 
 " Add the virtualenv's site-packages to vim path
 py << EOF
