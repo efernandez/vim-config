@@ -22,11 +22,8 @@ Bundle 'reinh/vim-makegreen'
 Bundle 'sontek/minibufexpl.vim'
        " File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
-       " Snippets (snippets/<lang>.snippets; C-j / auto-complete)
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+       " Snippets
+Bundle 'SirVer/ultisnips'
        " Use tab for all completions
 Bundle 'ervandew/supertab'
        " Manipulate parentheses, brackets, XML tags, etc.
@@ -123,11 +120,13 @@ set foldlevel=99
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
 "set wildmenu; set wildmode=longest,full
-    " default YouCompleteMe configuration for C++
-let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'
-    " bindings for snipMate
-imap <C-j> <esc>a<Plug>snipMateNextOrTrigger
-smap <C-j> <Plug>snipMateNextOrTrigger
+    " YouCompleteMe configuration
+let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
+"let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
+    " make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
 
 set showcmd
 set modeline
