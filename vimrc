@@ -41,6 +41,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-speeddating'
        " Comment out stuff (<leader>{cc,cu,cs,...})
 Bundle 'scrooloose/nerdcommenter'
+       " Class outline viewer (toggle w/ F8) (requires exuberant-ctags)
+Bundle 'majutsushi/tagbar'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
@@ -123,6 +125,7 @@ set relativenumber
 " Use "za" to open or close a fold.
 set foldmethod=indent
 set foldlevel=99
+map <C-f> <Esc>za
 
 " Auto-completion
 set omnifunc=syntaxcomplete#Complete
@@ -140,6 +143,8 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+    " Keybinding for Tagbar
+map <F8> :TagbarToggle<CR>
 
 set showcmd
 set modeline
