@@ -95,14 +95,25 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
+for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  " nmap <leader>1 :b1<CR>, etc.
+  execute "nmap <leader>" . i . " :b" . i . "<CR>"
+endfor
 
 " Tabs
 "   * Use :tabnew to create a tab.
 "   * Use :tabNext to change to next tab.
 "   * Use :tabclose to close the active tab.
 
+" Motions (with easymotion)
+" <C-q>: move to word (<C-w> conflicts with split management)
+" <C-j>: move to line
+map <C-q> <Esc><leader><leader>w
+"map <C-j> <Esc><leader><leader>j
+"map <C-k> <Esc><leader><leader>j
+
 " Backup settings
-set directory=~/.vim/.swap,/tmp
+set directory=~/.vim/.swap,/tmp  " don't create swap files in CWD
 
 " Enable syntax highlighting
 syntax on
@@ -161,6 +172,8 @@ set smartcase
 "   * Use "z=" with cursor on top of a word for suggestions.
 nmap <silent> <leader>s :setlocal spell!<CR>  " toggle spell checking
 au BufRead,BufNewFile *.txt setlocal spell spelllang=en
+au FileType svn setlocal spell spelllang=en
+au FileType gitcommit setlocal spell spelllang=en
 
 " Don't wrap lines, use horizontal scroll
 "set nowrap
@@ -172,8 +185,13 @@ if !has("gui_running")
 endif
 set mouse=a
 
+" Define :W, :Q, :X as aliases for :w, :q, :z.
 cnoreabbrev W w
 cnoreabbrev Q q
+cnoreabbrev X x
+
+" Other useful aliases
+command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 
 " Vala
 au BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
@@ -194,6 +212,7 @@ let g:pep8_map='<leader>8'
 " ROS
 au BufRead,BufNewFile *.urdf              setfiletype xml
 au BufRead,BufNewFile *.launch            setfiletype xml
+au BufRead,BufNewFile *.world             setfiletype xml
 au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
 au BufRead,BufNewFile manifest.xml        UltiSnipsAddFiletypes rosmanifest.xml
@@ -203,13 +222,13 @@ au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
 au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
 
 " Add the virtualenv's site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
+"py << EOF
+"import os.path
+"import sys
+"import vim
+"if 'VIRTUAL_ENV' in os.environ:
+    "project_base_dir = os.environ['VIRTUAL_ENV']
+    "sys.path.insert(0, project_base_dir)
+    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    "execfile(activate_this, dict(__file__=activate_this))
+"EOF
