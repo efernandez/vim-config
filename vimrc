@@ -211,6 +211,11 @@ au FileType gitcommit setlocal spell spelllang=en
 "set nowrap
 "set go+=b
 
+" Change local working directory to file directory
+autocmd BufEnter * silent! lcd %:p:h
+" <f12> will open a terminal in the working directory
+map <f12> <Esc>:silent ! nohup "$COLORTERM" >/dev/null 2>&1 <&1<CR>
+
 set pastetoggle=<F2>
 if has("gui_running")
   colors torte
