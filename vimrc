@@ -151,8 +151,9 @@ map <C-f> <Esc>za
 " Auto-completion
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
+    " Show various auto-complete options in command-line
+set wildmenu wildmode=longest,full
 set wildignore=*.o,*.obj,*.pyc
-"set wildmenu; set wildmode=longest,full
     " YouCompleteMe configuration
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
 "let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
@@ -200,7 +201,10 @@ au FileType gitcommit setlocal spell spelllang=en
 "set go+=b
 
 set pastetoggle=<F2>
-if !has("gui_running")
+if has("gui_running")
+  colors torte
+  set guifont=Ubuntu\ Mono\ 12
+else
   set background=dark
 endif
 set mouse=a
