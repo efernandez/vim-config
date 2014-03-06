@@ -193,6 +193,11 @@ cnoreabbrev X x
 " Other useful aliases
 command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 
+" Keybindings
+nmap <f3> :update<CR>
+vmap <f3> <Esc><f3>gv
+imap <f3> <c-o><f3>
+
 " Vala
 au BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
 au BufRead *.vapi set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
