@@ -107,10 +107,20 @@ endfor
 
 " Motions (with easymotion)
 " <C-q>: move to word (<C-w> conflicts with split management)
-" <C-j>: move to line
+" <C-j>/<C-k>: move to line
 map <C-q> <Esc><leader><leader>w
 "map <C-j> <Esc><leader><leader>j
 "map <C-k> <Esc><leader><leader>j
+
+" Diff mode
+"  * do: get changes from current window into other window
+"  * dp: put changes from current window into other window
+"  * dn: jump to next change
+"  * dm: jump to previous change
+"map <leader><Down> ]c
+"map <leader><Up> [c
+map dn ]c
+map dm [c
 
 " Backup settings
 set directory=~/.vim/.swap,/tmp  " don't create swap files in CWD
