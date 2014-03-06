@@ -122,6 +122,11 @@ map <C-q> <Esc><leader><leader>w
 map dn ]c
 map dm [c
 
+" Switching between code and header files
+"  * gf: with the cursor over a #include line, open the file.
+"  * <C-o>: go back to previous source file.
+set path=.,include/
+
 " Backup settings
 set directory=~/.vim/.swap,/tmp  " don't create swap files in CWD
 
