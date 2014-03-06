@@ -167,16 +167,26 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
     " Keybinding for Tagbar
 map <F8> :TagbarToggle<CR>
 
+" General configuration
+" (http://mislav.uniqpath.com/2011/12/vim-revisited/)
+set encoding=utf-8
+set history=600
 set showcmd
 set modeline
 set title
+set hidden  " allow switching to another buffer without saving
+runtime macros/matchit.vim  " enable extended % matching
+                            " ie. not only braces, but also if/endif, etc.
+set list listchars=tab:→\ ,trail:·
 
 " Let backspace delete over line breaks
 set backspace=indent,eol,start
 
-" Searching (http://mislav.uniqpath.com/2011/12/vim-revisited/)
+" Searching
 set ignorecase
 set smartcase
+set incsearch  " incremental search; still need to press Enter to accept
+set hlsearch   " highlight all search results; clear with :nohlsearch
 
 " Spell checking
 "   * Use "z=" with cursor on top of a word for suggestions.
