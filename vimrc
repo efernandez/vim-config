@@ -64,6 +64,12 @@ Bundle 'mitechie/pyflakes-pathogen'
        " Writing HTML
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
+" C++ plugins
+       " Switch between source and header files
+       " For possible mappings, see:
+       "   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
+Bundle 'derekwyatt/vim-fswitch'
+
 " Setup keyboard bindings for plugins
 map <leader>td <Plug>TaskList     " Browse TODO items
 map <leader>g :GundoToggle<CR>    " See past file edits
@@ -226,6 +232,9 @@ command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 nmap <f3> :update<CR>
 vmap <f3> <Esc><f3>gv
 imap <f3> <c-o><f3>
+
+" C++
+au FileType c,cpp map <f4> :FSHere<cr>
 
 " Vala
 au BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
