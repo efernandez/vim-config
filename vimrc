@@ -19,7 +19,7 @@ Bundle 'sjl/gundo.vim'
        " Run tests. :MakeGreen, :MakeGreen %
 Bundle 'reinh/vim-makegreen'
        " Shows open buffers
-Bundle 'sontek/minibufexpl.vim'
+Bundle 'fholgado/minibufexpl.vim'
        " File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
        " Snippets
