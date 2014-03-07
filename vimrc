@@ -74,10 +74,10 @@ Bundle 'mitechie/pyflakes-pathogen'
 Bundle 'derekwyatt/vim-fswitch'
 
 " Setup keyboard bindings for plugins
-map <leader>td <Plug>TaskList     " Browse TODO items
+map <leader>t <Plug>TaskList     " Browse TODO items
 map <leader>g :GundoToggle<CR>    " See past file edits
 map <leader>n :NERDTreeToggle<CR> " Open file browser
-map <leader>a <Esc>:Ack!
+"map <leader>a <Esc>:Ack!
 " For pydoc, use <leader>pw with cursor on a module name
 " For command-t, use <leader>t (or <leader>b to search only buffers)
 "   * Needs to be compiled with "rake make" first (with ruby-dev installed).
