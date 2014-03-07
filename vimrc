@@ -43,6 +43,9 @@ Bundle 'tpope/vim-speeddating'
 Bundle 'scrooloose/nerdcommenter'
        " Class outline viewer (toggle w/ F8) (requires exuberant-ctags)
 Bundle 'majutsushi/tagbar'
+       " Automatically add closing character for parenthesis, quotes, etc.
+"Bundle 'fholgado/vim-autoclose'
+"Bundle 'Townk/vim-autoclose'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
