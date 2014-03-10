@@ -270,8 +270,10 @@ map <f12> <Esc>:silent ! nohup "$COLORTERM" >/dev/null 2>&1 <&1<CR>
 
 set pastetoggle=<F2>
 if has("gui_running")
+  set guioptions-=T  " hide toolbar
   colors torte
-  set guifont=Ubuntu\ Mono\ 12
+  " https://powerline.readthedocs.org/en/latest/installation/linux.html
+  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 else
   set background=dark
 endif
