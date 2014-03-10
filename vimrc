@@ -140,6 +140,13 @@ map dm [c
 "  * <C-o>: go back to previous source file.
 set path=.,include/,../include/,/usr/include/c++/*,/opt/ros/hydro/include
 
+" Tags
+"  * Create tags file: ctags -R --exclude='.git' .
+"  * :tag X: jump to tag X
+        " Search for file named "tags", from current directory up to ~/
+set tags=./tags;~/
+map gt <C-]>
+
 " Marks and jump lists
 "  * <C-o>/<C-i>: jump between files
 "  * mX: create mark X (a-z) at current position
