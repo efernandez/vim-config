@@ -187,7 +187,13 @@ set completeopt=menuone,longest,preview
     " Show various auto-complete options in command-line
 set wildmenu wildmode=longest,full
 set wildignore=*.o,*.obj,*.pyc
+    " Syntastic configuration
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_cpp_include_dirs = ['.', '..', 'include', '../include', 'msg_gen/cpp/include', 'cfg/cpp', '/home/siegfriedgevatter/svn/catkin_ws/devel/include']
     " YouCompleteMe configuration
+let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
 "let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
     " make YCM compatible with UltiSnips (using supertab)
