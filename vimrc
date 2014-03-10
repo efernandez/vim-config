@@ -18,8 +18,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'sjl/gundo.vim'
        " Run tests. :MakeGreen, :MakeGreen %
 Bundle 'reinh/vim-makegreen'
-       " Shows open buffers
-Bundle 'fholgado/minibufexpl.vim'
        " File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
        " Snippets
@@ -106,7 +104,7 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 " Fullscreen the active split
 "map <c-w>f <c-w>_<c-w><Bar>
 
-" Buffers (with minibufexpl plugin to see a list of open buffers):
+" Buffers
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
