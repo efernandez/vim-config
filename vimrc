@@ -207,6 +207,13 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
     " Keybinding for Tagbar
 map <F8> :TagbarToggle<CR>
 
+" Dictionary completion
+"  * Use <C-x><C-k><C-n> to auto-complete words from dictionary.
+set dictionary=/usr/share/dict/words
+set completeopt=longest
+set complete-=k complete+=k  " use dictionary for <C-n>,
+                             " avoids having to type the <C-x><C-k>
+
 " General configuration
 " (http://mislav.uniqpath.com/2011/12/vim-revisited/)
 set encoding=utf-8
