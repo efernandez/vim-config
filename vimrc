@@ -46,6 +46,8 @@ Bundle 'majutsushi/tagbar'
        " Automatically add closing character for parenthesis, quotes, etc.
 "Bundle 'fholgado/vim-autoclose'
 "Bundle 'Townk/vim-autoclose'
+       " Show marks in gutter
+Bundle 'vim-scripts/ShowMarks'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
@@ -137,6 +139,14 @@ map dm [c
 "  * gf: with the cursor over a #include line, open the file.
 "  * <C-o>: go back to previous source file.
 set path=.,include/,../include/,/usr/include/c++/*,/opt/ros/hydro/include
+
+" Marks and jump lists
+"  * <C-o>/<C-i>: jump between files
+"  * mX: create mark X (a-z) at current position
+"  * 'X: jump to mark X (start of line)
+"  * `X: jump to mark X (exact position)
+"  * ''/`': jump to previous line/position
+let showmarks_include = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 " Backup settings
 set directory=~/.vim/.swap,/tmp  " don't create swap files in CWD
