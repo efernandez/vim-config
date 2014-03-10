@@ -216,15 +216,17 @@ set complete-=k complete+=k  " use dictionary for <C-n>,
 
 " General configuration
 " (http://mislav.uniqpath.com/2011/12/vim-revisited/)
+set shortmess+=I  " disable welcome message
 set encoding=utf-8
 set history=600
 set showcmd
 set modeline
-set title
+set title   " update terminal title
 set hidden  " allow switching to another buffer without saving
-runtime macros/matchit.vim  " enable extended % matching
-                            " ie. not only braces, but also if/endif, etc.
 set list listchars=tab:→\ ,trail:·
+
+" Enable extended % matching, ie. not only braces, but also if/endif, etc.
+runtime macros/matchit.vim
 
 " Let backspace delete over line breaks
 set backspace=indent,eol,start
@@ -242,10 +244,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Searching
-set ignorecase
+"set ignorecase
 set smartcase
 set incsearch  " incremental search; still need to press Enter to accept
 set hlsearch   " highlight all search results; clear with :nohlsearch
+set gdefault   " replace all matches in line by default (use /g for single match)
+    " <leader><space> to clear highlights:
+nnoremap <leader><space> :noh<cr>
 
 " Spell checking
 "   * Use "z=" with cursor on top of a word for suggestions.
