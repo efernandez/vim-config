@@ -46,6 +46,8 @@ Bundle 'majutsushi/tagbar'
        " Automatically add closing character for parenthesis, quotes, etc.
 "Bundle 'fholgado/vim-autoclose'
 "Bundle 'Townk/vim-autoclose'
+       " Better status bar
+Bundle 'bling/vim-airline'
        " Show marks in gutter
 Bundle 'vim-scripts/ShowMarks'
 
@@ -215,6 +217,18 @@ set list listchars=tab:→\ ,trail:·
 
 " Let backspace delete over line breaks
 set backspace=indent,eol,start
+
+" Status line (Airline)
+set t_Co=256
+set laststatus=2
+let g:airline_theme = 'powerlineish'
+let g:airline_enable_branch = 1
+let g:airline_enable_syntastic = 1
+let g:airline_enable_tagbar = 1
+let g:airline_enable_hunks = 1
+let g:airline_detect_whitespace = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Searching
 set ignorecase
