@@ -52,6 +52,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
        " Git integration (syntax, indent)
 Bundle 'tpope/vim-git'
+       " Show changed lines
+Bundle 'airblade/vim-gitgutter'
 
 " Python plugins
        " PEP-8 checker
