@@ -288,12 +288,20 @@ cnoreabbrev X x
 command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 
 " Keybindings
+  " Save file with F3
 nmap <f3> :update<CR>
 vmap <f3> <Esc><f3>gv
 imap <f3> <c-o><f3>
+  " Delete word with Alt+Backspace
+imap <M-BS> <C-W>
+  " Disable F1 for help
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 
 " C++
 au FileType c,cpp map <f4> :FSHere<cr>
+au FileType c,cpp map <buffer> <f5> :w<CR>:!make -j8<CR>
 
 " Vala
 au BufRead *.vala set efm=%f:%l.%c-%[%^:]%#:\ %t%[%^:]%#:\ %m
