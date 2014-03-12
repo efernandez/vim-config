@@ -283,6 +283,12 @@ else
 endif
 set mouse=a
 
+" Remap :q (and :x) to "delete buffer", so it won't close the
+" entire window in some situations.
+"   * For actually closing the window, use :qa
+"cnoreabbrev q bd
+"cnoreabbrev x update<bar>bd
+
 " Define :W, :Q, :X as aliases for :w, :q, :z.
 cnoreabbrev W w
 cnoreabbrev Q q
