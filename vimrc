@@ -48,6 +48,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'bling/vim-airline'
        " Show marks in gutter
 Bundle 'vim-scripts/ShowMarks'
+       "
+Bundle 'mihaifm/bufstop'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
@@ -83,8 +85,6 @@ map <leader>g :GundoToggle<CR>    " See past file edits
 map <leader>n :NERDTreeToggle<CR> " Open file browser
 "map <leader>a <Esc>:Ack!
 " For pydoc, use <leader>pw with cursor on a module name
-" For command-t, use <leader>t (or <leader>b to search only buffers)
-"   * Needs to be compiled with "rake make" first (with ruby-dev installed).
 
 " Window Splits
 "  * Vertical Split: Ctrl+w + v / Horizontal Split: Ctrl+w + s
@@ -108,10 +108,15 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
-for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
+map <leader>b :BufstopFast<CR>
+map <C-tab> :BufstopBack<CR>
+map <C-S-tab> :BufstopForward<CR>
+    " Use <leader>3 to cycle last 3 buffers, <leader>4, etc.
+let g:BufstopAutoSpeedToggle = 1
+"for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
   " nmap <leader>1 :b1<CR>, etc.
-  execute "nmap <leader>" . i . " :b" . i . "<CR>"
-endfor
+"  execute "nmap <leader>" . i . " :b" . i . "<CR>"
+"endfor
 
 " Tabs
 "   * Use :tabnew to create a tab.
