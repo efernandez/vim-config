@@ -27,7 +27,7 @@ Bundle 'ervandew/supertab'
        " Manipulate parentheses, brackets, XML tags, etc.
 "Bundle 'tpope/vim-surround'
        " Multi-language syntax checking on save
-Bundle 'scrooloose/syntastic'
+"Bundle 'scrooloose/syntastic'
        " Multi-language auto-completion (needs compilation!)
 Bundle 'Valloric/YouCompleteMe'
        " TODO list (<leader>td)
@@ -189,13 +189,16 @@ set completeopt=menuone,longest,preview
 set wildmenu wildmode=longest,full
 set wildignore=*.o,*.obj,*.pyc
     " Syntastic configuration
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_cpp_include_dirs = ['.', '..', 'include', '../include', 'msg_gen/cpp/include', 'cfg/cpp', '/home/siegfriedgevatter/svn/catkin_ws/devel/include']
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_cpp_include_dirs = ['.', '..', 'include', '../include', 'msg_gen/cpp/include', 'cfg/cpp', '/home/siegfriedgevatter/svn/catkin_ws/devel/include']
     " YouCompleteMe configuration
-let g:ycm_register_as_syntastic_checker = 1
+"let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
+    " diagnostics
+let g:ycm_enable_diagnostic_signs = 1
+let g:ycm_always_populate_location_list = 1
 "let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
     " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -237,7 +240,7 @@ set t_Co=256
 set laststatus=2
 let g:airline_theme = 'powerlineish'
 let g:airline_enable_branch = 1
-let g:airline_enable_syntastic = 1
+"let g:airline_enable_syntastic = 1
 let g:airline_enable_tagbar = 1
 let g:airline_enable_hunks = 1
 let g:airline_detect_whitespace = 1
