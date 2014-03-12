@@ -164,6 +164,7 @@ filetype on
 filetype plugin indent on
 
 " Indentation
+set autoindent
 set smartindent
 set tabstop=4
 set shiftwidth=4
@@ -317,7 +318,7 @@ au FileType python map <buffer> <leader>j :RopeGotoDefinition<CR>
 au FileType python map <buffer> <leader>r :RopeRename<CR>
 au FileType python map <buffer> <f5>      :w<CR>:!python %<CR>
 let g:pyflakes_use_quickfix = 0
-let g:pep8_map='<leader>8'
+"let g:pep8_map='<leader>8'
 
 " ROS
 au BufRead,BufNewFile *.urdf              setfiletype xml
