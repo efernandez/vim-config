@@ -250,7 +250,6 @@ let g:airline_enable_tagbar = 1
 let g:airline_enable_hunks = 1
 let g:airline_detect_whitespace = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
 
 " Searching
 "set ignorecase
