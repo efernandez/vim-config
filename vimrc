@@ -50,6 +50,9 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/ShowMarks'
        " Fast buffer switching (<leader>b, <leader>{1,...,9})
 Bundle 'mihaifm/bufstop'
+       " Multiple Selection (similar to Sublime Text)
+       " Usage: Ctrl-{n,p,x} to select occurences of a word below cursor
+Bundle 'terryma/vim-multiple-cursors'
        " Guess indentation from file
 Bundle 'myint/indent-finder'
 
