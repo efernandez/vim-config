@@ -70,6 +70,8 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'mitechie/pyflakes-pathogen'
        " Refactoring and code-assist (see doc/ropevim.txt in repo)
 "Bundle 'sontek/rope-vim'
+       " % matching for Python
+Bundle 'lambacck/python_matchit'
 
 " HTML plugins
        " Writing HTML
