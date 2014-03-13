@@ -48,7 +48,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'bling/vim-airline'
        " Show marks in gutter
 Bundle 'vim-scripts/ShowMarks'
-       "
+       " Fast buffer switching (<leader>b, <leader>{1,...,9})
 Bundle 'mihaifm/bufstop'
 
 " Git plugins
@@ -252,13 +252,13 @@ let g:airline_detect_whitespace = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " Searching
-"set ignorecase
+set ignorecase
 set smartcase
 set incsearch  " incremental search; still need to press Enter to accept
 set hlsearch   " highlight all search results; clear with :nohlsearch
 set gdefault   " replace all matches in line by default (use /g for single match)
     " <leader><space> to clear highlights:
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR>
 
 " Spell checking
 "   * Use "z=" with cursor on top of a word for suggestions.
