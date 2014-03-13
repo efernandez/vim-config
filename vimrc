@@ -50,6 +50,8 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-scripts/ShowMarks'
        " Fast buffer switching (<leader>b, <leader>{1,...,9})
 Bundle 'mihaifm/bufstop'
+       " Guess indentation from file
+Bundle 'myint/indent-finder'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
