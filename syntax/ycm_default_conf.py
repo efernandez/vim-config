@@ -4,6 +4,8 @@
 # For more information, please refer to <http://unlicense.org/>
 
 import os
+import shlex
+import subprocess
 import ycm_core
 
 # These are the compilation flags that will be used in case there's no
@@ -11,8 +13,8 @@ import ycm_core
 flags = [
 '-Wall',
 '-Wextra',
-'-Werror',
-'-Wc++98-compat',
+#'-Werror',
+#'-Wc++98-compat',
 '-Wno-long-long',
 '-Wno-variadic-macros',
 '-fexceptions',
@@ -42,8 +44,6 @@ flags = [
 'srv_gen/cpp/include',
 '-I',
 'cfg/cpp',
-'-I',
-'/opt/ros/hydro/include',
 '-I',
 '/home/siegfriedgevatter/svn/catkin_ws/devel/include',
 '-isystem',
@@ -75,6 +75,15 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include',
 ]
+
+# This function makes it easy to pull in additional flags from pkg-config
+def PkgConfig(args):
+  cmd = ['pkg-config'] + shlex.split(args)
+  out = subprocess.Popen(cmd, shell=False, stdout=subprocess.PIPE).stdout
+  line = out.readline()[:-1].split(" ")
+  return filter(lambda a: a != ' ', line)
+
+flags += PkgConfig("--cflags roscpp pal_core eigen3")
 
 
 # Set this to the absolute path to the folder (NOT the file!) containing the
