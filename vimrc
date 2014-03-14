@@ -284,6 +284,9 @@ autocmd BufEnter * silent! lcd %:p:h
 map <f12> <Esc>:silent ! nohup "$COLORTERM" >/dev/null 2>&1 <&1<CR>
 
 set pastetoggle=<F2>
+imap <F2> <ESC>:set paste!<CR>i<Right>
+imap <C-v> :<C-r>*
+so ~/.vim/bundle/unimpaired_paste.vim
 if has("gui_running")
   set guioptions-=T  " hide toolbar
   colors torte

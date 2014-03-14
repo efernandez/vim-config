@@ -1,4 +1,5 @@
-bundle/**
-~bundle/vundle
+bundle/*
+!bundle/vundle
+!bundle/unimpaired_paste.vim
 .swap/*
-~/.swap/GIT_KEEP
+!/.swap/GIT_KEEP
