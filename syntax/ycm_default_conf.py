@@ -13,6 +13,7 @@ import ycm_core
 flags = [
 '-Wall',
 '-Wextra',
+'-Wshadow',
 #'-Werror',
 #'-Wc++98-compat',
 '-Wno-long-long',
