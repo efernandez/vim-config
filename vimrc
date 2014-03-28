@@ -316,8 +316,9 @@ command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 nmap <f3> :update<CR>
 vmap <f3> <Esc><f3>gv
 imap <f3> <c-o><f3>
-  " Delete word with Alt+Backspace
+  " Delete word with Alt+Backspace / Alt-Delete
 imap <M-BS> <C-W>
+imap <M-DEL> <Esc>ldwi
   " Disable F1 for help
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -366,3 +367,12 @@ au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
     "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     "execfile(activate_this, dict(__file__=activate_this))
 "EOF
+
+" Run :FixWhitespace to remove end of line white space
+" From https://github.com/bronson/vim-trailing-whitespace
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
