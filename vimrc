@@ -156,8 +156,8 @@ set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src
 " Tags
 "  * Create tags file: ctags -R --exclude='.git' .
 "  * :tag X: jump to tag X
-        " Search for file named "tags", from current directory up to ~/
-set tags=./tags;~/
+        " Search for file named ".tags", from current directory up to ~/
+set tags=./.tags;~/
 map gt <C-]>
 
 " Marks and jump lists
