@@ -116,6 +116,7 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
+map <C-b> :CtrlPBuffer<CR>
 map <leader>b :BufstopFast<CR>
 map <C-tab> :BufstopBack<CR>
 map <C-S-tab> :BufstopForward<CR>
