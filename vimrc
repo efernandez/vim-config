@@ -208,6 +208,8 @@ set wildignore=*.o,*.obj,*.pyc
     " YouCompleteMe configuration
 "let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
+"let g:ycm_seed_identifiers_with_syntax = 1
+"let g:ycm_collect_identifiers_from_tags_files = 1
     " diagnostics
 let g:ycm_enable_diagnostic_signs = 1
 let g:ycm_always_populate_location_list = 1
