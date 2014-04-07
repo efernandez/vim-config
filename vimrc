@@ -85,6 +85,7 @@ Bundle 'lambacck/python_matchit'
        " For possible mappings, see:
        "   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
 Bundle 'derekwyatt/vim-fswitch'
+Bundle 'po1/vim-pycmake'
 
 " Setup keyboard bindings for plugins
 map <leader>t <Plug>TaskList     " Browse TODO items
@@ -150,7 +151,7 @@ map dm [c
 " Switching between code and header files
 "  * gf: with the cursor over a #include line, open the file.
 "  * <C-o>: go back to previous source file.
-set path=.,include/,../include/,/usr/include/c++/*,/opt/ros/hydro/include
+set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src
 
 " Tags
 "  * Create tags file: ctags -R --exclude='.git' .
