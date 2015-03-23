@@ -86,6 +86,10 @@ Bundle 'lambacck/python_matchit'
        "   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
 Bundle 'derekwyatt/vim-fswitch'
 
+" ROS plugins
+Bundle 'taketwo/vim-ros'
+       "Vim plugin for ROS development"
+
 " Setup keyboard bindings for plugins
 map <leader>t <Plug>TaskList     " Browse TODO items
 map <leader>g :GundoToggle<CR>    " See past file edits
