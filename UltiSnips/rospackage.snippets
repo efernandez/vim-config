@@ -1,0 +1,90 @@
+# By Enrique Fernandez
+
+snippet package "Package tag" !b
+<package format="${1:1}>
+  $2
+</package>
+endsnippet
+
+snippet name "Package name tag" !b
+<name>${1}</name>
+endsnippet
+
+snippet version "Package version tag" !b
+<version>${1:0}.${2:0}.${3:0}</version>
+endsnippet
+
+snippet description "Package description tag" !b
+<description>
+  $0
+</package>
+endsnippet
+
+snippet maintainer "Package maintainer tag" !b
+<maintainer email="${1:user}@${2:gmail}.${3:com}">${4:$1}</maintainer>
+endsnippet
+
+snippet author "Package author tag" !b
+<author email="${1:user}@${2:gmail}.${3:com}">${4:$1}</author>
+endsnippet
+
+snippet url "Package URL tag" !b
+<url type="${1:website|bugtracker|repository}">${2}</url>
+endsnippet
+
+snippet license "Package license tag" !b
+<license>${1:Apache 2.0|BSD|Boost Software License|GPLv2|GPLv3|LGPLv2.1|LGPLv3|MIT|Mozilla Public License Version 1.1}</license>
+endsnippet
+
+snippet replace "Replace rule tag" !b
+<replace>${1}</replace>
+endsnippet
+
+snippet buildtool_depend "buildtool_depend rule tag" !b
+<buildtool_depend>${1}</buildtool_depend>
+endsnippet
+
+snippet build_depend "build_depend rule tag" !b
+<build_depend>${1}</build_depend>
+endsnippet
+
+snippet run_depend "run_depend rule tag" !b
+<run_depend>${1}</run_depend>
+endsnippet
+
+snippet test_depend "test_depend rule tag" !b
+<test_depend>${1}</test_depend>
+endsnippet
+
+snippet conflict "conflict rule tag" !b
+<conflict>${1}</conflict>
+endsnippet
+
+snippet export "export rule tag" !b
+<export>
+  ${1}
+</export>
+endsnippet
+
+snippet rviz "rviz plugin tag" !b
+<rviz plugin="${1:path}/${2:plugin_description.xml}"/>
+endsnippet
+
+snippet architecture_independent "architecture_independent tag" !b
+<architecture_independent/>
+endsnippet
+
+snippet deprecated "deprecated rule tag" !b
+<deprecated>
+  ${1}
+</deprecated>
+endsnippet
+
+snippet message_generator "message_generator tag" !b
+<tagmessage_generator>${1:cpp}<tagmessage_generator/>
+endsnippet
+
+snippet metapackage "metapackage tag" !b
+<metapackage/>
+endsnippet
+

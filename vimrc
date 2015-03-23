@@ -350,6 +350,7 @@ au BufRead,BufNewFile *.world             setfiletype xml
 au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
 au BufRead,BufNewFile manifest.xml        UltiSnipsAddFiletypes rosmanifest.xml
+au BufRead,BufNewFile package.xml         UltiSnipsAddFiletypes rospackage.xml
 au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
