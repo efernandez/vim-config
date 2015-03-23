@@ -85,6 +85,7 @@ Bundle 'lambacck/python_matchit'
        " For possible mappings, see:
        "   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
 Bundle 'derekwyatt/vim-fswitch'
+Bundle 'po1/vim-pycmake'
 
 " ROS plugins
 Bundle 'taketwo/vim-ros'
@@ -119,6 +120,7 @@ nmap <C-kMultiply> :enew<CR>  " create new empty buffer (in active split)
 "   * Use ":e <filename>" to place in buffer.
 "   * Use ":bN" to switch to buffer N.
 "   * Use ":bw" or ":bd" to close a buffer.
+map <C-b> :CtrlPBuffer<CR>
 map <leader>b :BufstopFast<CR>
 map <C-tab> :BufstopBack<CR>
 map <C-S-tab> :BufstopForward<CR>
@@ -154,13 +156,13 @@ map dm [c
 " Switching between code and header files
 "  * gf: with the cursor over a #include line, open the file.
 "  * <C-o>: go back to previous source file.
-set path=.,include/,../include/,/usr/include/c++/*,/opt/ros/hydro/include
+set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src
 
 " Tags
 "  * Create tags file: ctags -R --exclude='.git' .
 "  * :tag X: jump to tag X
-        " Search for file named "tags", from current directory up to ~/
-set tags=./tags;~/
+        " Search for file named ".tags", from current directory up to ~/
+set tags=./.tags;~/
 map gt <C-]>
 
 " Marks and jump lists
@@ -212,6 +214,8 @@ set wildignore=*.o,*.obj,*.pyc
     " YouCompleteMe configuration
 "let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
+"let g:ycm_seed_identifiers_with_syntax = 1
+"let g:ycm_collect_identifiers_from_tags_files = 1
     " diagnostics
 let g:ycm_enable_diagnostic_signs = 1
 let g:ycm_always_populate_location_list = 1
@@ -320,8 +324,9 @@ command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 nmap <f3> :update<CR>
 vmap <f3> <Esc><f3>gv
 imap <f3> <c-o><f3>
-  " Delete word with Alt+Backspace
+  " Delete word with Alt+Backspace / Alt-Delete
 imap <M-BS> <C-W>
+imap <M-DEL> <Esc>ldwi
   " Disable F1 for help
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
@@ -374,3 +379,12 @@ set clipboard=unnamed
     "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     "execfile(activate_this, dict(__file__=activate_this))
 "EOF
+
+" Run :FixWhitespace to remove end of line white space
+" From https://github.com/bronson/vim-trailing-whitespace
+function! s:FixWhitespace(line1,line2)
+    let l:save_cursor = getpos(".")
+    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+    call setpos('.', l:save_cursor)
+endfunction
+command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
