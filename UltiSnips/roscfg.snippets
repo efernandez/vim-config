@@ -7,10 +7,7 @@ snippet cfg "Cfg template" !b
 PACKAGE = '${1:package_name}'
 NODE = '${2:node_name}'
 
-import roslib
-roslib.load_manifest(PACKAGE)
-
-from dynamic_reconfigure.parameter_generator import *
+from dynamic_reconfigure.parameter_generator_catkin import *
 
 gen = ParameterGenerator()
 
