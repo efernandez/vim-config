@@ -366,7 +366,7 @@ au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
 au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
 
 " Clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " Add the virtualenv's site-packages to vim path
 "py << EOF
