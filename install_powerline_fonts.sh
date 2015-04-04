@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# http://superuser.com/questions/803145/vim-airline-plugin-bad-characters
+# https://powerline.readthedocs.org/en/latest/installation/linux.html#fonts-installation
+
 mkdir -p $HOME/.fonts
 cd $HOME/.fonts
 wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf
