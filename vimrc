@@ -1,5 +1,5 @@
 set nocompatible
-let mapleader = '<'  " default \, not available on ES keyboard
+" let mapleader = '<'  " default \, not available on ES keyboard
 
 " Load plugins
 filetype off
