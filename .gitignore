@@ -3,3 +3,4 @@ bundle/*
 !bundle/unimpaired_paste.vim
 .swap/*
 !/.swap/GIT_KEEP
+*.pyc
