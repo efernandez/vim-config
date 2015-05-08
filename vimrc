@@ -368,6 +368,10 @@ au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
 " Clipboard
 set clipboard=unnamedplus
 
+" Color column
+" https://coderwall.com/p/uu7-aa/vi-display-a-vertical-line-at-an-arbitrary-column-width
+set colorcolumn=80
+
 " Add the virtualenv's site-packages to vim path
 "py << EOF
 "import os.path
