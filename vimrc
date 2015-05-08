@@ -265,6 +265,7 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+"let g:airline_powerline_fonts = 1
 
 " Searching
 set ignorecase
@@ -393,4 +394,3 @@ function! s:FixWhitespace(line1,line2)
 endfunction
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 
-let g:airline_powerline_fonts = 1
