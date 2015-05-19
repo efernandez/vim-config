@@ -265,13 +265,13 @@ set backspace=indent,eol,start
 set t_Co=256
 set laststatus=2
 let g:airline_theme = 'powerlineish'
+let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_powerline_fonts = 1
 
 " Searching
 set ignorecase
