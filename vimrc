@@ -91,6 +91,12 @@ Bundle 'po1/vim-pycmake'
 Bundle 'taketwo/vim-ros'
        "Vim plugin for ROS development"
 
+" Plugin for vim to enable opening a file in a given line
+" https://github.com/bogado/file-line
+" http://www.vim.org/scripts/script.php?script_id=2184
+Bundle 'bogado/file-line'
+       "Vim plugin to open a file in a given line"
+
 " Setup keyboard bindings for plugins
 map <leader>t <Plug>TaskList     " Browse TODO items
 map <leader>g :GundoToggle<CR>    " See past file edits
