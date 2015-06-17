@@ -400,3 +400,6 @@ function! s:FixWhitespace(line1,line2)
 endfunction
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 
+" Make ~ (change case) an operator
+" http://blog.sanctum.geek.nz/vim-anti-patterns/
+set tildeop
