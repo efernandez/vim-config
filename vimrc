@@ -373,7 +373,12 @@ au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
 au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
 
 " Clipboard
-set clipboard=unnamedplus
+" Note that:
+" unnamed (X clipboard)
+" unnamedplus ((GNOME) System clipboard)
+" http://vim.wikia.com/wiki/Accessing_the_system_clipboard
+set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 " Color column
 " https://coderwall.com/p/uu7-aa/vi-display-a-vertical-line-at-an-arbitrary-column-width
