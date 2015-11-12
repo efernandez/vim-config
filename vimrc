@@ -362,8 +362,10 @@ let g:pyflakes_use_quickfix = 0
 " ROS
 au BufRead,BufNewFile *.urdf              setfiletype xml
 au BufRead,BufNewFile *.launch            setfiletype xml
+au BufRead,BufNewFile *.test              setfiletype xml
 au BufRead,BufNewFile *.world             setfiletype xml
 au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
+au BufRead,BufNewFile *.test              UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
 au BufRead,BufNewFile manifest.xml        UltiSnipsAddFiletypes rosmanifest.xml
 au BufRead,BufNewFile package.xml         UltiSnipsAddFiletypes rospackage.xml
