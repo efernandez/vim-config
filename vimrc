@@ -361,6 +361,8 @@ let g:pyflakes_use_quickfix = 0
 
 " ROS
 au BufRead,BufNewFile *.urdf              setfiletype xml
+au BufRead,BufNewFile *.sdf               setfiletype xml
+au BufRead,BufNewFile *.xacro             setfiletype xml
 au BufRead,BufNewFile *.launch            setfiletype xml
 au BufRead,BufNewFile *.test              setfiletype xml
 au BufRead,BufNewFile *.world             setfiletype xml
