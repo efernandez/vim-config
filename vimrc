@@ -165,7 +165,7 @@ map dm [c
 set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src
 
 " Tags
-"  * Create tags file: ctags -R --exclude='.git' .
+"  * Create tags file: ctags -R -f .tags --exclude='.git' .
 "  * :tag X: jump to tag X
         " Search for file named ".tags", from current directory up to ~/
 set tags=./.tags;~/
