@@ -95,7 +95,10 @@ Bundle 'taketwo/vim-ros'
 " https://github.com/bogado/file-line
 " http://www.vim.org/scripts/script.php?script_id=2184
 Bundle 'bogado/file-line'
-       "Vim plugin to open a file in a given line"
+
+" PCL NASL plugins
+       " Vim extensions for programming in NASL
+Bundle 'tenable/vim-nasl'
 
 " Setup keyboard bindings for plugins
 map <leader>t <Plug>TaskList     " Browse TODO items
@@ -375,6 +378,17 @@ au BufRead,BufNewFile */stacks/*.{cpp,h}  UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */*_ws/*.{cpp,h}    UltiSnipsAddFiletypes roscpp.cpp
 au BufRead,BufNewFile */stacks/*.py       UltiSnipsAddFiletypes rospy.python
 au BufRead,BufNewFile */*_ws/*.py         UltiSnipsAddFiletypes rospy.python
+
+" PLC NASL
+let nasl_space_errors = 1
+autocmd BufNewFile,BufRead *.audit set syntax=xml
+autocmd BufNewFile,BufRead *.nasl set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set filetype=nasl
+autocmd BufNewFile,BufRead *.inc set indentexpr=
+
+autocmd FileType nasl setlocal shiftwidth=2 tabstop=2 expandtab softtabstop=2 colorcolumn=70
+
+let g:syntastic_nasl_checkers = ['nasl_parse', 'nasl']
 
 " Clipboard
 " Note that:
