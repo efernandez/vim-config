@@ -369,6 +369,7 @@ au BufRead,BufNewFile *.xacro             setfiletype xml
 au BufRead,BufNewFile *.launch            setfiletype xml
 au BufRead,BufNewFile *.test              setfiletype xml
 au BufRead,BufNewFile *.world             setfiletype xml
+au BufRead,BufNewFile *.bmr               setfiletype python
 au BufRead,BufNewFile *.launch            UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile *.test              UltiSnipsAddFiletypes roslaunch.xml
 au BufRead,BufNewFile cfg/*.cfg           UltiSnipsAddFiletypes roscfg.python
