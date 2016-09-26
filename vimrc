@@ -165,14 +165,21 @@ map dm [c
 " Switching between code and header files
 "  * gf: with the cursor over a #include line, open the file.
 "  * <C-o>: go back to previous source file.
-set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src
+set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src,/usr/include/*,/opt/clearpath/2.1devel/sdk/include/*
 
 " Tags
 "  * Create tags file: ctags -R -f .tags --exclude='.git' .
 "  * :tag X: jump to tag X
         " Search for file named ".tags", from current directory up to ~/
 set tags=./.tags;~/
+set tags+=~/dev/tags/usr.tags
+set tags+=~/dev/tags/opt_clearpath_2.1devel.tags
 map gt <C-]>
+
+" Shortcuts for ctags
+" See https://andrew.stwrt.ca/posts/vim-ctags/
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <silent> <Leader>b :TagbarToggle<CR>
 
 " Marks and jump lists
 "  * <C-o>/<C-i>: jump between files
