@@ -408,7 +408,7 @@ set clipboard^=unnamedplus
 
 " Color column
 " https://coderwall.com/p/uu7-aa/vi-display-a-vertical-line-at-an-arbitrary-column-width
-set colorcolumn=80
+set colorcolumn=120
 
 " Add the virtualenv's site-packages to vim path
 "py << EOF
