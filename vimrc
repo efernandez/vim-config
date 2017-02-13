@@ -55,6 +55,8 @@ Bundle 'mihaifm/bufstop'
 Bundle 'terryma/vim-multiple-cursors'
        " Guess indentation from file
 Bundle 'myint/indent-finder'
+       " Tabular
+Bundle 'godlygeek/tabular'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
