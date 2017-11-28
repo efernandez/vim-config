@@ -58,6 +58,8 @@ Bundle 'terryma/vim-multiple-cursors'
 Bundle 'myint/indent-finder'
        " Tabular
 Bundle 'godlygeek/tabular'
+       " Better Rainbow Parentheses
+Bundle 'kien/rainbow_parentheses.vim'
 
 " Git plugins
        " Git integration. :Gedit, :Gdiff, etc.
@@ -439,3 +441,39 @@ command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 " Make ~ (change case) an operator
 " http://blog.sanctum.geek.nz/vim-anti-patterns/
 set tildeop
+
+" Better Rainbow Parentheses:
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
+
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
+
+" Commands provided:
+":RainbowParenthesesToggle       " Toggle it on/off
+":RainbowParenthesesLoadRound    " (), the default when toggling
+":RainbowParenthesesLoadSquare   " []
+":RainbowParenthesesLoadBraces   " {}
+":RainbowParenthesesLoadChevrons " <>
+
+" Set always on:
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
