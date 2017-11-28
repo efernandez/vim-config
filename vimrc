@@ -77,6 +77,8 @@ Bundle 'mitechie/pyflakes-pathogen'
 "Bundle 'sontek/rope-vim'
        " % matching for Python
 Bundle 'lambacck/python_matchit'
+       " Asynchronous Lint Engine
+Bundle 'w0rp/ale'
 
 " HTML plugins
        " Writing HTML
