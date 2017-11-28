@@ -10,6 +10,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Generic plugins
+" See https://vimawesome.com for more plugins
        " ack-grep in vim
 "Bundle 'mileszs/ack.vim'
        " search all file names (C-p)
