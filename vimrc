@@ -107,6 +107,10 @@ Bundle 'bogado/file-line'
        " Vim extensions for programming in NASL
 Bundle 'tenable/vim-nasl'
 
+" clang-format plugin
+Bundle 'rhysd/vim-clang-format'
+Bundle 'kana/vim-operator-user'
+
 " Setup keyboard bindings for plugins
 map <leader>t <Plug>TaskList     " Browse TODO items
 map <leader>g :GundoToggle<CR>    " See past file edits
@@ -428,6 +432,22 @@ set colorcolumn=120
     "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     "execfile(activate_this, dict(__file__=activate_this))
 "EOF
+
+" clang-format plugin
+let g:clang_format#style_options = {
+            \ "AccessModifierOffset" : -4,
+            \ "AllowShortIfStatementsOnASingleLine" : "true",
+            \ "AlwaysBreakTemplateDeclarations" : "true",
+            \ "Standard" : "C++11"}
+
+" map to <Leader>cf in C++ code
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+" if you install vim-operator-user
+autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
+" Toggle auto formatting:
+nmap <Leader>C :ClangFormatAutoToggle<CR>
+autocmd FileType c,cpp ClangFormatAutoEnable
 
 " Run :FixWhitespace to remove end of line white space
 " From https://github.com/bronson/vim-trailing-whitespace
