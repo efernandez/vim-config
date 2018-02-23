@@ -11,92 +11,92 @@ Bundle 'gmarik/vundle'
 
 " Generic plugins
 " See https://vimawesome.com for more plugins
-       " ack-grep in vim
+" ack-grep in vim
 "Bundle 'mileszs/ack.vim'
-       " search all file names (C-p)
+" search all file names (C-p)
 Bundle 'kien/ctrlp.vim'
-       " Undo tree (<leader>g)
+" Undo tree (<leader>g)
 Bundle 'sjl/gundo.vim'
-       " Run tests. :MakeGreen, :MakeGreen %
+" Run tests. :MakeGreen, :MakeGreen %
 Bundle 'reinh/vim-makegreen'
-       " File tree (<leader>n)
+" File tree (<leader>n)
 Bundle 'vim-scripts/The-NERD-tree'
-       " Snippets
+" Snippets
 Bundle 'SirVer/ultisnips'
-       " Use tab for all completions
+" Use tab for all completions
 Bundle 'ervandew/supertab'
-       " Manipulate parentheses, brackets, XML tags, etc.
+" Manipulate parentheses, brackets, XML tags, etc.
 "Bundle 'tpope/vim-surround'
-       " Multi-language syntax checking on save
+" Multi-language syntax checking on save
 "Bundle 'scrooloose/syntastic'
-       " Multi-language auto-completion (needs compilation!)
-Bundle 'Valloric/YouCompleteMe'
-       " TODO list (<leader>td)
+" Multi-language auto-completion (needs compilation!)
+"Bundle 'Valloric/YouCompleteMe'
+" TODO list (<leader>td)
 Bundle 'vim-scripts/TaskList.vim'
-       " Fast motions (<leader><leader>{w,b,...})
+" Fast motions (<leader><leader>{w,b,...})
 Bundle 'Lokaltog/vim-easymotion'
-       " <C-a>/<C-x> increment/decrement numbers; add support for dates
-       " d<C-a> changes a date to the current day
+" <C-a>/<C-x> increment/decrement numbers; add support for dates
+" d<C-a> changes a date to the current day
 Bundle 'tpope/vim-speeddating'
-       " Comment out stuff (<leader>{cc,cu,cs,...})
+" Comment out stuff (<leader>{cc,cu,cs,...})
 Bundle 'scrooloose/nerdcommenter'
-       " Class outline viewer (toggle w/ F8) (requires exuberant-ctags)
+" Class outline viewer (toggle w/ F8) (requires exuberant-ctags)
 Bundle 'majutsushi/tagbar'
-       " Automatically add closing character for parenthesis, quotes, etc.
+" Automatically add closing character for parenthesis, quotes, etc.
 "Bundle 'fholgado/vim-autoclose'
 "Bundle 'Townk/vim-autoclose'
-       " Better status bar
+" Better status bar
 Bundle 'bling/vim-airline'
-       " Show marks in gutter
+" Show marks in gutter
 Bundle 'vim-scripts/ShowMarks'
-       " Fast buffer switching (<leader>b, <leader>{1,...,9})
+" Fast buffer switching (<leader>b, <leader>{1,...,9})
 Bundle 'mihaifm/bufstop'
-       " Multiple Selection (similar to Sublime Text)
-       " Usage: Ctrl-{n,p,x} to select occurences of a word below cursor
+" Multiple Selection (similar to Sublime Text)
+" Usage: Ctrl-{n,p,x} to select occurences of a word below cursor
 Bundle 'terryma/vim-multiple-cursors'
-       " Guess indentation from file
+" Guess indentation from file
 Bundle 'myint/indent-finder'
-       " Tabular
+" Tabular
 Bundle 'godlygeek/tabular'
-       " Better Rainbow Parentheses
+" Better Rainbow Parentheses
 Bundle 'kien/rainbow_parentheses.vim'
 
 " Git plugins
-       " Git integration. :Gedit, :Gdiff, etc.
+" Git integration. :Gedit, :Gdiff, etc.
 Bundle 'tpope/vim-fugitive'
-       " Git integration (syntax, indent)
+" Git integration (syntax, indent)
 Bundle 'tpope/vim-git'
-       " Show changed lines
+" Show changed lines
 Bundle 'airblade/vim-gitgutter'
 
 " Python plugins
-       " PEP-8 checker
+" PEP-8 checker
 "Bundle 'vim-scripts/pep8'
-       " See module documentation (<leader>pw + cursor)
+" See module documentation (<leader>pw + cursor)
 Bundle 'fs111/pydoc.vim'
-       " On-the-fly code checking (requires pyflakes)
+" On-the-fly code checking (requires pyflakes)
 Bundle 'mitechie/pyflakes-pathogen'
-       " Refactoring and code-assist (see doc/ropevim.txt in repo)
+" Refactoring and code-assist (see doc/ropevim.txt in repo)
 "Bundle 'sontek/rope-vim'
-       " % matching for Python
+" % matching for Python
 Bundle 'lambacck/python_matchit'
-       " Asynchronous Lint Engine
+" Asynchronous Lint Engine
 Bundle 'w0rp/ale'
 
 " HTML plugins
-       " Writing HTML
+" Writing HTML
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " C++ plugins
-       " Switch between source and header files
-       " For possible mappings, see:
-       "   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
+" Switch between source and header files
+" For possible mappings, see:
+"   https://github.com/derekwyatt/vim-fswitch/blob/master/doc/fswitch.txt
 Bundle 'derekwyatt/vim-fswitch'
 Bundle 'po1/vim-pycmake'
 
 " ROS plugins
 Bundle 'taketwo/vim-ros'
-       "Vim plugin for ROS development"
+"Vim plugin for ROS development"
 
 " Plugin for vim to enable opening a file in a given line
 " https://github.com/bogado/file-line
@@ -104,7 +104,7 @@ Bundle 'taketwo/vim-ros'
 Bundle 'bogado/file-line'
 
 " PCL NASL plugins
-       " Vim extensions for programming in NASL
+" Vim extensions for programming in NASL
 Bundle 'tenable/vim-nasl'
 
 " vim-autoformat
@@ -143,10 +143,10 @@ map <C-b> :CtrlPBuffer<CR>
 map <leader>b :BufstopFast<CR>
 map <C-tab> :BufstopBack<CR>
 map <C-S-tab> :BufstopForward<CR>
-    " Use <leader>3 to cycle last 3 buffers, <leader>4, etc.
+" Use <leader>3 to cycle last 3 buffers, <leader>4, etc.
 let g:BufstopAutoSpeedToggle = 1
 "for i in [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  " nmap <leader>1 :b1<CR>, etc.
+" nmap <leader>1 :b1<CR>, etc.
 "  execute "nmap <leader>" . i . " :b" . i . "<CR>"
 "endfor
 
@@ -180,7 +180,7 @@ set path=.,include/,../include/,/usr/include/c++/*,~/svn/robot/sources/src,/usr/
 " Tags
 "  * Create tags file: ctags -R -f .tags --exclude='.git' .
 "  * :tag X: jump to tag X
-        " Search for file named ".tags", from current directory up to ~/
+" Search for file named ".tags", from current directory up to ~/
 set tags=./.tags;~/
 set tags+=~/dev/tags/usr.tags
 set tags+=~/dev/tags/opt_clearpath_2.1devel.tags
@@ -229,32 +229,32 @@ map <C-f> <Esc>za
 " Auto-completion
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,longest,preview
-    " Show various auto-complete options in command-line
+" Show various auto-complete options in command-line
 set wildmenu wildmode=longest,full
 set wildignore=*.o,*.obj,*.pyc
-    " Syntastic configuration
+" Syntastic configuration
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
 "let g:syntastic_aggregate_errors = 1
 "let g:syntastic_cpp_include_dirs = ['.', '..', 'include', '../include', 'msg_gen/cpp/include', 'cfg/cpp', '/home/siegfriedgevatter/svn/catkin_ws/devel/include']
-    " YouCompleteMe configuration
-"let g:ycm_register_as_syntastic_checker = 1
-let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
-"let g:ycm_seed_identifiers_with_syntax = 1
-"let g:ycm_collect_identifiers_from_tags_files = 1
-    " diagnostics
-let g:ycm_enable_diagnostic_signs = 1
-let g:ycm_always_populate_location_list = 1
-"let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
-    " make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-    " better key bindings for UltiSnipsExpandTrigger
+"" YouCompleteMe configuration
+""let g:ycm_register_as_syntastic_checker = 1
+"let g:ycm_global_ycm_extra_conf = '~/.vim/syntax/ycm_default_conf.py'  " default for C++
+""let g:ycm_seed_identifiers_with_syntax = 1
+""let g:ycm_collect_identifiers_from_tags_files = 1
+"" diagnostics
+"let g:ycm_enable_diagnostic_signs = 1
+"let g:ycm_always_populate_location_list = 1
+""let g:ycm_autoclose_preview_window_after_completion = 1  " otherwise close with :pclose or <C-w>z
+"" make YCM compatible with UltiSnips (using supertab)
+"let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+"let g:SuperTabDefaultCompletionType = '<C-n>'
+" better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-    " Keybinding for Tagbar
+" Keybinding for Tagbar
 map <F8> :TagbarToggle<CR>
 
 " Dictionary completion
@@ -262,7 +262,7 @@ map <F8> :TagbarToggle<CR>
 set dictionary=/usr/share/dict/words
 set completeopt=longest
 set complete-=k complete+=k  " use dictionary for <C-n>,
-                             " avoids having to type the <C-x><C-k>
+" avoids having to type the <C-x><C-k>
 
 " General configuration
 " (http://mislav.uniqpath.com/2011/12/vim-revisited/)
@@ -299,7 +299,7 @@ set smartcase
 set incsearch  " incremental search; still need to press Enter to accept
 set hlsearch   " highlight all search results; clear with :nohlsearch
 set gdefault   " replace all matches in line by default (use /g for single match)
-    " <leader><space> to clear highlights:
+" <leader><space> to clear highlights:
 nnoremap <leader><space> :noh<CR>
 
 " Spell checking
@@ -323,12 +323,12 @@ imap <F2> <ESC>:set paste!<CR>i<Right>
 imap <C-v> :<C-r>*
 so ~/.vim/bundle/unimpaired_paste.vim
 if has("gui_running")
-  set guioptions-=T  " hide toolbar
-  colors torte
-  " https://powerline.readthedocs.org/en/latest/installation/linux.html
-  set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+       set guioptions-=T  " hide toolbar
+       colors torte
+       " https://powerline.readthedocs.org/en/latest/installation/linux.html
+       set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 else
-  set background=dark
+       set background=dark
 endif
 set mouse=a
 
@@ -347,14 +347,14 @@ cnoreabbrev X x
 command! UpdateConfig so $MYVIMRC  " Reload vim configuration
 
 " Keybindings
-  " Save file with F3
+" Save file with F3
 nmap <f3> :update<CR>
 vmap <f3> <Esc><f3>gv
 imap <f3> <c-o><f3>
-  " Delete word with Alt+Backspace / Alt-Delete
+" Delete word with Alt+Backspace / Alt-Delete
 imap <M-BS> <C-W>
 imap <M-DEL> <Esc>ldwi
-  " Disable F1 for help
+" Disable F1 for help
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -426,10 +426,10 @@ set colorcolumn=120
 "import sys
 "import vim
 "if 'VIRTUAL_ENV' in os.environ:
-    "project_base_dir = os.environ['VIRTUAL_ENV']
-    "sys.path.insert(0, project_base_dir)
-    "activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    "execfile(activate_this, dict(__file__=activate_this))
+"project_base_dir = os.environ['VIRTUAL_ENV']
+"sys.path.insert(0, project_base_dir)
+"activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+"execfile(activate_this, dict(__file__=activate_this))
 "EOF
 
 " vim-autoformat plugin
@@ -438,9 +438,9 @@ au BufWrite * :Autoformat
 " Run :FixWhitespace to remove end of line white space
 " From https://github.com/bronson/vim-trailing-whitespace
 function! s:FixWhitespace(line1,line2)
-    let l:save_cursor = getpos(".")
-    silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
-    call setpos('.', l:save_cursor)
+       let l:save_cursor = getpos(".")
+       silent! execute ':' . a:line1 . ',' . a:line2 . 's/\s\+$//'
+       call setpos('.', l:save_cursor)
 endfunction
 command! -range=% FixWhitespace call <SID>FixWhitespace(<line1>,<line2>)
 
@@ -450,23 +450,23 @@ set tildeop
 
 " Better Rainbow Parentheses:
 let g:rbpt_colorpairs = [
-    \ ['brown',       'RoyalBlue3'],
-    \ ['Darkblue',    'SeaGreen3'],
-    \ ['darkgray',    'DarkOrchid3'],
-    \ ['darkgreen',   'firebrick3'],
-    \ ['darkcyan',    'RoyalBlue3'],
-    \ ['darkred',     'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['brown',       'firebrick3'],
-    \ ['gray',        'RoyalBlue3'],
-    \ ['black',       'SeaGreen3'],
-    \ ['darkmagenta', 'DarkOrchid3'],
-    \ ['Darkblue',    'firebrick3'],
-    \ ['darkgreen',   'RoyalBlue3'],
-    \ ['darkcyan',    'SeaGreen3'],
-    \ ['darkred',     'DarkOrchid3'],
-    \ ['red',         'firebrick3'],
-    \ ]
+                     \ ['brown',       'RoyalBlue3'],
+                     \ ['Darkblue',    'SeaGreen3'],
+                     \ ['darkgray',    'DarkOrchid3'],
+                     \ ['darkgreen',   'firebrick3'],
+                     \ ['darkcyan',    'RoyalBlue3'],
+                     \ ['darkred',     'SeaGreen3'],
+                     \ ['darkmagenta', 'DarkOrchid3'],
+                     \ ['brown',       'firebrick3'],
+                     \ ['gray',        'RoyalBlue3'],
+                     \ ['black',       'SeaGreen3'],
+                     \ ['darkmagenta', 'DarkOrchid3'],
+                     \ ['Darkblue',    'firebrick3'],
+                     \ ['darkgreen',   'RoyalBlue3'],
+                     \ ['darkcyan',    'SeaGreen3'],
+                     \ ['darkred',     'DarkOrchid3'],
+                     \ ['red',         'firebrick3'],
+                     \ ]
 
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
