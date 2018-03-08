@@ -433,7 +433,18 @@ set colorcolumn=120
 "EOF
 
 " vim-autoformat plugin
-au BufWrite * :Autoformat
+autocmd BufWritePre *.h,*.hpp,*.c,*.cc,*.cpp :Autoformat
+
+" clang-format vim integration
+" It doesn't work :(
+"map <C-K> :pyf /usr/share/clang/clang-format-3.9/clang-format.py<cr>
+"imap <C-K> <c-o>:pyf /usr/share/clang/clang-format-3.9/clang-format.py<cr>
+
+"function! Formatonsave()
+  "let l:formatdiff = 1
+  "pyf /usr/share/clang/clang-format-3.9/clang-format.py
+"endfunction
+"autocmd BufWritePre *.h,*.cc,*.cpp call Formatonsave()
 
 " Run :FixWhitespace to remove end of line white space
 " From https://github.com/bronson/vim-trailing-whitespace
