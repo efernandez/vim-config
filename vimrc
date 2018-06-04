@@ -47,6 +47,7 @@ Bundle 'majutsushi/tagbar'
 "Bundle 'Townk/vim-autoclose'
 " Better status bar
 Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 " Show marks in gutter
 Bundle 'vim-scripts/ShowMarks'
 " Fast buffer switching (<leader>b, <leader>{1,...,9})
