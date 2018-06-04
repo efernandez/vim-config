@@ -9,5 +9,6 @@ ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim; git submodule update --init
 vim +BundleInstall
 cd bundle/YouCompleteMe
-./install.sh
+./install_powerline_fonts.sh
+./install_ycm.sh
 ```
