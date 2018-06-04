@@ -221,6 +221,7 @@ set number
 set relativenumber
 
 " Code folding
+" See http://vim.wikia.com/wiki/Folding
 " Use "za" to open or close a fold.
 set foldmethod=indent
 set foldlevel=99
