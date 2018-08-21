@@ -96,7 +96,9 @@ Bundle 'derekwyatt/vim-fswitch'
 Bundle 'po1/vim-pycmake'
 
 " ROS plugins
-Bundle 'taketwo/vim-ros'
+" Disable vim-ros because it doesn't work with python3:
+" https://github.com/taketwo/vim-ros/commit/89824996e97a8e1f773a3559da01e564122bb079
+"Bundle 'taketwo/vim-ros'
 "Vim plugin for ROS development"
 
 " Plugin for vim to enable opening a file in a given line
