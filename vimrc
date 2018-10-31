@@ -58,6 +58,7 @@ Bundle 'terryma/vim-multiple-cursors'
 " Guess indentation from file
 Bundle 'myint/indent-finder'
 " Tabular
+" For usage see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 Bundle 'godlygeek/tabular'
 " Better Rainbow Parentheses
 Bundle 'kien/rainbow_parentheses.vim'
