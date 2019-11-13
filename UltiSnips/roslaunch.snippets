@@ -16,6 +16,10 @@ snippet node "Node tag" !b
 <node pkg="${1}" type="${2}" name="${3:$2}"${4: args="${5}"}/>
 endsnippet
 
+snippet test "Test tag" !b
+<test test-name="${1}" pkg="${2}" type="${3:$1}" time-limit="${4:120}"/>
+endsnippet
+
 snippet param "Param tag" !b
 <param name="${1}" value="${2}" type="${3:str|int|double|bool}"/>
 endsnippet
